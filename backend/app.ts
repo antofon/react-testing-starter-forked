@@ -75,9 +75,9 @@ if (process.env.NODE_ENV === "test" || process.env.NODE_ENV === "development") {
 app.use(auth);
 
 /* istanbul ignore if */
-if (process.env.REACT_APP_AUTH0) {
-  app.use(checkAuth0Jwt);
-}
+// if (process.env.REACT_APP_AUTH0) {
+//   app.use(checkAuth0Jwt);
+// }
 
 /* istanbul ignore if */
 if (process.env.REACT_APP_OKTA) {
@@ -85,14 +85,14 @@ if (process.env.REACT_APP_OKTA) {
 }
 
 /* istanbul ignore if */
-if (process.env.REACT_APP_AWS_COGNITO) {
-  app.use(checkCognitoJwt);
-}
+// if (process.env.REACT_APP_AWS_COGNITO) {
+//   app.use(checkCognitoJwt);
+// }
 
 /* istanbul ignore if */
-if (process.env.REACT_APP_GOOGLE) {
-  app.use(checkGoogleJwt);
-}
+// if (process.env.REACT_APP_GOOGLE) {
+//   app.use(checkGoogleJwt);
+// }
 
 app.use(
   "/graphql",
